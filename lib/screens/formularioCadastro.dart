@@ -30,11 +30,11 @@ class _FormularioCadastroState extends State<FormularioCadastro> {
     _controllerCampoCidade.addListener(_usuarioCidadeListen);
   }
 
-  void _usuarioNomeListen() {
+  _usuarioNomeListen() {
     _usuarioNome = _controllerCampoNome.text;
   }
 
-  void _usuarioCidadeListen() {
+  _usuarioCidadeListen() {
     _usuarioCidade = _controllerCampoCidade.text;
   }
 
@@ -43,10 +43,7 @@ class _FormularioCadastroState extends State<FormularioCadastro> {
     _CadastroPageState();
   }
 
-  dispose() {
-    super.dispose();
-  }
-
+ 
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
