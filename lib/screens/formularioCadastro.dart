@@ -95,7 +95,7 @@ class _FormularioCadastroState extends State<FormularioCadastro> {
         style: TextStyle(color: Colors.black, fontSize: 20),
         decoration: InputDecoration(
           labelText: _rotuloCampoNome,
-          labelStyle: TextStyle(color: Colors.blue),
+          labelStyle: TextStyle(color: Colors.black),
         ));
   }
 }
