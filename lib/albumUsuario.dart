@@ -7,8 +7,11 @@ class AlbumUsuario{
     this.nome = nome;
     this.cidade = senha;
   }
-  AlbumUsuario.fromJson(Map json)
-      : nome = json['nome'],
-        cidade = json['senha'];
+  factory AlbumUsuario.fromJson(Map<String, dynamic> json) {
+    return AlbumUsuario(
+      nome: json['nome'],
+      cidade: json['cidade'],
+    );
+  }
   
 }
