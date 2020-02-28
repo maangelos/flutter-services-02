@@ -22,9 +22,7 @@ class _ListaUsuariosState extends State<ListaUsuarios> {
         Iterable list = json.decode(response.body);
         dadosUsuarios =
             list.map((model) => AlbumUsuario.fromJson(model)).toList();
-        if (novoUsuario != null) {
-          dadosUsuarios.add(novoUsuario);
-        }
+        adiciona();
       });
     });
   }
@@ -34,11 +32,13 @@ class _ListaUsuariosState extends State<ListaUsuarios> {
     _getUsuarios();
   }
 
-  dispose() {
-    super.dispose();
+  adiciona(){
+    if(novoUsuario!=null){
+      dadosUsuarios.add(novoUsuario);
+    }
   }
-
-
+  
+  
   String nomeUsuario;
   String cidadeUsuario;
 
